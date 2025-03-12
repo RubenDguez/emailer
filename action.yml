@@ -1,8 +1,9 @@
 name: Emailer Action
 description: This action sends emails
 author: Argenis Ruben Dominguez
-icon: activity
-color: greem
+branding:
+  icon: mail
+  color: greem
 
 inputs:
   secrets_service:
