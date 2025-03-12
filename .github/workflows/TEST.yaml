@@ -12,8 +12,8 @@ jobs:
             - name: Checkout Code
               uses: actions/checkout@v4
 
-            - name: Send Email
-              uses: ./
+            - name: Emailer Action
+              uses: RubenDguez/emailer@v0.1.1-alpha
               with:
                 secrets_user: ${{ secrets.USER }}
                 secrets_pass: ${{ secrets.PASS }}
