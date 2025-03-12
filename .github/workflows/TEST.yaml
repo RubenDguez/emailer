@@ -15,6 +15,8 @@ jobs:
             - name: Send Email
               uses: ./
               with:
+                secrets_user: ${{ secrets.USER }}
+                secrets_pass: ${{ secrets.PASS }}
                 from: "ADMIN"
                 to: argenis.dominguez@hotmail.com
                 subject: Hello There

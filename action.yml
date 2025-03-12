@@ -3,6 +3,24 @@ description: This action sends emails
 author: Argenis Ruben Dominguez
 
 inputs:
+  secrets_service:
+    required: true
+    default: gmail
+
+  secrets_host:
+    required: true
+    default: smtp.gmail.com
+
+  secrets_port:
+    required: true
+    default: 465
+
+  secrets_user:
+    required: true
+
+  secrets_pass:
+    required: true
+
   from:
     required: true
     description: 'Email address to send the email from'

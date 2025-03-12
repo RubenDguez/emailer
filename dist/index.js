@@ -39861,14 +39861,15 @@ class Mailer {
     }
     send(from, to, subject, html) {
         return __awaiter(this, void 0, void 0, function* () {
+            var _a, _b, _c, _d, _e;
             this.mailTransporter = nodemailer_1.default.createTransport({
-                service: process.env.SERVICE,
-                host: process.env.HOST,
-                port: parseInt(process.env.PORT),
+                service: (_a = (0, core_1.getInput)('secrets_service')) !== null && _a !== void 0 ? _a : process.env.SERVICE,
+                host: (_b = (0, core_1.getInput)('secrets_host')) !== null && _b !== void 0 ? _b : process.env.HOST,
+                port: parseInt((_c = (0, core_1.getInput)('secrets_port')) !== null && _c !== void 0 ? _c : process.env.PORT),
                 secure: true,
                 auth: {
-                    user: process.env.USER,
-                    pass: process.env.PASS,
+                    user: (_d = (0, core_1.getInput)('secrets_user')) !== null && _d !== void 0 ? _d : process.env.USER,
+                    pass: (_e = (0, core_1.getInput)('secrets_pass')) !== null && _e !== void 0 ? _e : process.env.PASS,
                 },
             });
             this.mailDetails = { from, to, subject, html };

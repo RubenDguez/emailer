@@ -25,13 +25,13 @@ class Mailer {
     html: string,
   ) {
     this.mailTransporter = nodemailer.createTransport({
-      service: process.env.SERVICE!,
-      host: process.env.HOST!,
-      port: parseInt(process.env.PORT!),
+      service: getInput('secrets_service') ?? process.env.SERVICE!,
+      host: getInput('secrets_host') ?? process.env.HOST!,
+      port: parseInt(getInput('secrets_port') ?? process.env.PORT!),
       secure: true,
       auth: {
-        user: process.env.USER,
-        pass: process.env.PASS,
+        user: getInput('secrets_user') ?? process.env.USER,
+        pass: getInput('secrets_pass') ?? process.env.PASS,
       },
     });
 
