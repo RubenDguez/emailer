@@ -3,7 +3,7 @@ description: This action sends emails
 author: Argenis Ruben Dominguez
 branding:
   icon: mail
-  color: greem
+  color: green
 
 inputs:
   secrets_service:
