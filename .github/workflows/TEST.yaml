@@ -1,0 +1,21 @@
+name: TEST
+
+on:
+    workflow_dispatch:
+    push:
+
+jobs:
+    send-email:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            - name: Send Email
+              uses: ./
+              with:
+                from: "ADMIN"
+                to: argenis.dominguez@hotmail.com
+                subject: Hello There
+                html: <div><h1>Hello</h1></div>

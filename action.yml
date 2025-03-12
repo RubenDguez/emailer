@@ -1,0 +1,24 @@
+name: Emailer Action
+description: This action sends emails
+author: Argenis Ruben Dominguez
+
+inputs:
+  from:
+    required: true
+    description: 'Email address to send the email from'
+
+  to:
+    required: true
+    description: 'Email address to send the email to'
+
+  subject:
+    required: true
+    description: 'Subject of the email'
+
+  html:
+    required: true
+    description: 'HTML content of the email'
+
+runs:
+  using: node20
+  main: dist/index.js

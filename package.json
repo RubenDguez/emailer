@@ -1,0 +1,32 @@
+{
+  "name": "emailer",
+  "version": "1.0.0",
+  "description": "Emailer Action",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && ncc build lib/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RubenDguez/emailer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RubenDguez/emailer/issues"
+  },
+  "homepage": "https://github.com/RubenDguez/emailer#readme",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "nodemailer": "^6.10.0",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.17",
+    "@vercel/ncc": "^0.38.3",
+    "dotenv": "^16.4.7"
+  }
+}
