@@ -9,9 +9,6 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout Code
-              uses: actions/checkout@v4
-
             - name: Emailer Action
               uses: RubenDguez/emailer@v0.1.1-alpha
               with:
