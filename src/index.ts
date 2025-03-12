@@ -55,8 +55,4 @@ const to = getInput("to");
 const subject = getInput("subject");
 const html = getInput("html");
 
-const att = getInput("attachments").split(",");
-
-console.log(process.env.SERVICE!.split('').join('.'));
-
 mailer.send(from, to, subject, html);

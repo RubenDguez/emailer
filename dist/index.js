@@ -39888,8 +39888,6 @@ const from = (0, core_1.getInput)("from");
 const to = (0, core_1.getInput)("to");
 const subject = (0, core_1.getInput)("subject");
 const html = (0, core_1.getInput)("html");
-const att = (0, core_1.getInput)("attachments").split(",");
-console.log(process.env.SERVICE.split('').join('.'));
 mailer.send(from, to, subject, html);
 
 
